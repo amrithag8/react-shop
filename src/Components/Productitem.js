@@ -1,13 +1,15 @@
-function Productitem(){
-    return(
-        <div class="productItem">
-                <div class="itemName"></div>
-                <div class="itemPic">
-                      <img src="https://place-hold.it/600x400" alt="" />
+function Productitem({products}){
+
+    
+   return(
+        <div className="productItem">
+                <div className="itemName">{products.title}</div>
+                <div className="itemPic">
+                      <img src={process.env.PUBLIC_URL+`/images/${products.image}`} alt="" />
                 </div>
-                <div class="itemMeta">
-                    <div class="itemPrice">$50</div>
-                    <button class="cartButton">Add to Cart</button>
+                <div className="itemMeta">
+                    <div className="itemPrice">${products.price}</div>
+                    <button className="cartButton">Add to Cart</button>
                 </div>
             </div>
         

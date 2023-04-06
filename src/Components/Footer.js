@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <div class="appFooter">
+        <div className="appFooter">
         <p> Site title developed with ReactJS  </p>
     </div>
     )

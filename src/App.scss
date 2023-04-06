@@ -60,14 +60,22 @@ body{
     display:flex;
     gap:20px;
 }
+.list{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
 
+.list li a{
+    text-decoration: none;
+}
 .appMain{
     flex:1;
     border-top:1px solid $border;
     border-bottom:1px solid $border;
     padding:20px 0px;
     display:grid;
-    grid-template-columns:8fr 4fr;
+    // grid-template-columns:8fr 4fr;
     gap:20px;
     .productGallery{
         display:grid;

@@ -1,7 +1,10 @@
-import Main from "../Components/Main";
+
+import Productgallery from "../Components/Productgallery";
 function Home(){
     return(
-        <Main/>  
+        <>
+        <Productgallery/> 
+        </>
     )
 }
 

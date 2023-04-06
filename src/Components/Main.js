@@ -1,10 +1,14 @@
-import Productgallery from "./Productgallery";
-function Main(){
-    return(
-        <div class="appMain">
-            <Productgallery/>
-            </div>
-    )
-}
 
-export default Main;
+
+        function Main({children}){
+            return(
+                <div className="appMain">
+                    {children}
+        {/* <Productgallery/>
+        <Cart/> */}
+                </div>
+            )
+        }
+        export default Main;
+    
+
