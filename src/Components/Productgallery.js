@@ -4,6 +4,7 @@ import {AppContext} from "../App";
 
 function Productgallery(){
     const{state:{product}}= useContext(AppContext);
+    
     return(
         <div className="productGallery">
            {

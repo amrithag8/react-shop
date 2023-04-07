@@ -13,6 +13,8 @@ export const AppContext=createContext();
 function App() {
 const[state, dispatch]=useReducer(reducer, initialState);
 
+console.log("product is", state);
+
 
   async function getProductdata()
   {   const response=await fetch("https://amrithag8.github.io/api-test/productdata.json");
