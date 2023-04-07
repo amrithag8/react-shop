@@ -1,8 +1,9 @@
 {
+  "homepage": "http://amrithag8.github.io/react-shop",
   "name": "react-shopping-cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://amrithag8.github.io/react-shop",
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

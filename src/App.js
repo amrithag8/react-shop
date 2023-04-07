@@ -13,13 +13,13 @@ export const AppContext=createContext();
 function App() {
 const[state, dispatch]=useReducer(reducer, initialState);
 
-console.log("product is", state);
+
 
 
   async function getProductdata()
-  {   const response=await fetch("https://amrithag8.github.io/api-test/./productdata.json");
+  {   const response=await fetch("https://my-json-server.typicode.com/amrithag8/api-test/products");
       const data=await response.json();
-      return data.products;
+      return data;
       
       }
 
@@ -30,6 +30,8 @@ console.log("product is", state);
         })
       }, [])
 
+
+      console.log("product is", state);
 
 
   return (
