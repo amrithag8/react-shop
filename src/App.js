@@ -17,7 +17,7 @@ console.log("product is", state);
 
 
   async function getProductdata()
-  {   const response=await fetch("https://cors-anywhere.herokuapp.com/https://amrithag8.github.io/api-test/productdata.json");
+  {   const response=await fetch("https://amrithag8.github.io/api-test/productdata.json");
       const data=await response.json();
       return data.products;
       
