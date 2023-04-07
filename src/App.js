@@ -30,12 +30,12 @@ const[state, dispatch]=useReducer(reducer, initialState);
         })
       }, [])
 
-
-      console.log("product is", state);
+      // console.log("product is", state);
+      
 
 
   return (
-    <AppContext.Provider value={{state}}>
+    <AppContext.Provider value={{state, dispatch}}>
     <div className="App">
       <div className="appWrapper">
       <Header/>

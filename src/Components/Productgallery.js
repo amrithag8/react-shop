@@ -3,6 +3,8 @@ import { useContext } from "react";
 import {AppContext} from "../App";
 
 function Productgallery(){
+
+    
     const{state:{product}}= useContext(AppContext);
     
     return(
