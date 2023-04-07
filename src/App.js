@@ -17,7 +17,7 @@ console.log("product is", state);
 
 
   async function getProductdata()
-  {   const response=await fetch("https://amrithag8.github.io/api-test/productdata.json");
+  {   const response=await fetch("https://amrithag8.github.io/api-test/productdata/products");
       const data=await response.json();
       return data.products;
       
