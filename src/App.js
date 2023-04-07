@@ -17,9 +17,9 @@ const[state, dispatch]=useReducer(reducer, initialState);
 
 
   async function getProductdata()
-  {   const response=await fetch("https://my-json-server.typicode.com/amrithag8/api-test/products");
+  {   const response=await fetch("https://amrithag8.github.io/api-test/db.json");
       const data=await response.json();
-      return data;
+      return data.products;
       
       }
 
