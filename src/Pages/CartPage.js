@@ -9,6 +9,7 @@ function Cartpage(){
 return acc+curr.price*curr.count;
     },0);
 
+    
 
     function checkoutHandler(){
       alert("You are checked out to payments page");
@@ -27,14 +28,25 @@ return acc+curr.price*curr.count;
             })
            }
 
-<div className="cartTotal">Total : {cartTotal}</div>
+
            
-           <div className="cartFooter">
-             <button className="clear" onClick={clearCartHandler}>
-               Clear Cart
-             </button>
-             <button className="checkout" onClick={checkoutHandler}>Checkout</button>
-           </div>
+           {
+            cart.length?(
+            <>
+            <div className="cartTotal">Total : {cartTotal}</div>
+            
+            <div className="cartFooter">
+              
+            <button className="clear" onClick={clearCartHandler}>
+              Clear Cart
+            </button>
+            <button className="checkout" onClick={checkoutHandler}>Checkout</button>
+          </div>
+          </>):(<div className="cartFooter">
+<h3>Please add items to your cart</h3>
+          </div>)
+           }
+           
           
            </div>
     )
