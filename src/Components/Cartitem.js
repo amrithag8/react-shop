@@ -1,34 +1,49 @@
-function Cartitem(){
+import { useContext } from "react";
+import { AppContext } from "../App";
+
+function Cartitem({items}){
+
+  console.log("items are", items);
+  const {state:{cart}, dispatch}=useContext(AppContext);
+
+function increamentHandler(id){
+  dispatch({type:"ADD-COUNT", payload:id})
+}
+
+
+function decrementHandler(id){
+  if(items.count>1){
+    dispatch({type: "REDUCE_COUNT", payload: id});
+  }
+  else 
+  {
+    dispatch({type: "REMOVE_ITEM", payload: id});
+  }
+}
+
     return(
         <>
 <div className="cartList">
                
                <div className="cartItem">
                 <div className="itemPic">
-                  <img src="https://place-hold.it/60x60" alt="" />
+                  <img src={process.env.PUBLIC_URL+`/images/${items.image}`} alt="" />
                 </div>
-                <div class="itemInfo">
-                  <p>Product name</p>
-                  <div class="cartUpdater">
-                    <button>-</button>
-                    <div>1</div>
-                    <button>+</button>
+                <div className="itemInfo">
+                  <p>{items.title}</p>
+                  <div className="cartUpdater">
+                    <button onClick={()=>decrementHandler(items.id)}>-</button>
+                    <div>{items.count}</div>
+                    <button onClick={()=>increamentHandler(items.id)}>+</button>
                   </div>
                 </div>
-                <div class="itemPrice">50</div>
+                <div className="itemPrice">${items.price}</div>
                </div>
                
             
            </div>
            
-           <div class="cartTotal">Total : 47547</div>
            
-          <div class="cartFooter">
-            <button class="clear">
-              Clear Cart
-            </button>
-            <button class="checkout">Checkout</button>
-          </div>
 
           
           
