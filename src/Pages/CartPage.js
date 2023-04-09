@@ -10,6 +10,11 @@ return acc+curr.price*curr.count;
     },0);
 
 
+    function checkoutHandler(){
+      alert("You are checked out to payments page");
+    }
+
+
     function clearCartHandler(){
       dispatch({type: "CLEAR_CART"})
     }
@@ -28,7 +33,7 @@ return acc+curr.price*curr.count;
              <button className="clear" onClick={clearCartHandler}>
                Clear Cart
              </button>
-             <button className="checkout">Checkout</button>
+             <button className="checkout" onClick={checkoutHandler}>Checkout</button>
            </div>
           
            </div>
